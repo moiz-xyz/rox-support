@@ -1,0 +1,41 @@
+/** Socket.IO event names — keep in sync with rox-shield-backend/src/support/realtime/events.ts */
+export const SupportEvents = {
+  READY: "session:ready",
+  ERROR: "session:error",
+  AGENT_PRESENCE: "agent:presence",
+  CUSTOMER_PRESENCE: "customer:presence",
+  AGENT_SET_STATUS: "agent:set-status",
+  MESSAGE_SEND: "message:send",
+  MESSAGE_NEW: "message:new",
+  MESSAGE_DELIVERED: "message:delivered",
+  MESSAGE_STATUS: "message:status",
+  CONVERSATION_READ: "conversation:read",
+  MESSAGES_READ: "message:read",
+  TYPING_START: "typing:start",
+  TYPING_STOP: "typing:stop",
+  TYPING: "typing",
+  CONVERSATION_NEW: "conversation:new",
+  CONVERSATION_UPDATED: "conversation:updated",
+  CONVERSATION_ASSIGNED: "conversation:assigned",
+  CONVERSATION_REMOVED: "conversation:removed",
+  SYNC: "sync",
+  CALL_START: "call:start",
+  CALL_INCOMING: "call:incoming",
+  CALL_ACCEPT: "call:accept",
+  CALL_ACCEPTED: "call:accepted",
+  CALL_REJECT: "call:reject",
+  CALL_REJECTED: "call:rejected",
+  CALL_CANCEL: "call:cancel",
+  CALL_END: "call:end",
+  CALL_ENDED: "call:ended",
+  CALL_SIGNAL: "call:signal",
+  CALL_MEDIA_STATE: "call:media-state",
+  CALL_REJOIN: "call:rejoin",
+  CALL_TAKEN: "call:taken",
+  NOTIFICATION_NEW: "notification:new",
+
+  // quick answers (agents only): payload { conversationId, suggestion: QuickAnswerSuggestion | null }
+  QUICK_ANSWER_SUGGESTION: "quickanswer:suggestion",
+} as const;
+
+export type SupportEventName = (typeof SupportEvents)[keyof typeof SupportEvents];

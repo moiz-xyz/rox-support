@@ -1,0 +1,15 @@
+{
+  "name": "rox-support",
+  "private": true,
+  "description": "Rox Support \u2014 reusable real-time customer support platform (SDK, widget, agent dashboard)",
+  "scripts": {
+    "dev": "pnpm build:packages && pnpm --filter rox-support-dashboard dev",
+    "start": "pnpm --filter rox-support-dashboard start",
+    "build:packages": "pnpm --filter @roxshield/support-sdk build && pnpm --filter @roxshield/support-widget build",
+    "build": "pnpm build:packages && pnpm --filter rox-support-dashboard build",
+    "dev:dashboard": "pnpm --filter rox-support-dashboard dev",
+    "dev:example": "pnpm --filter rox-support-example-host dev",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "packageManager": "pnpm@10.24.0"
+}

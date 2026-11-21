@@ -1,0 +1,39 @@
+{
+  "name": "@roxshield/support-widget",
+  "version": "0.1.0",
+  "description": "Drop-in customer support widget (chat, files, voice notes, WebRTC voice calls) for React / Next.js",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  },
+  "dependencies": {
+    "@roxshield/support-sdk": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "tsup": "8.5.0",
+    "typescript": "5.9.3"
+  }
+}
